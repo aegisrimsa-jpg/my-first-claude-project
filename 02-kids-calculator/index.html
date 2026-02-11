@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小朋友計算機</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="title">小朋友計算機</h1>
+  <div class="container">
+    <!-- 左側：計算機 -->
+    <div class="calculator">
+      <div class="display" id="display">0</div>
+      <div class="buttons">
+        <button class="btn btn-clear" onclick="clearAll()">C</button>
+        <button class="btn btn-paren" onclick="inputChar('(')">(</button>
+        <button class="btn btn-paren" onclick="inputChar(')')">)</button>
+        <button class="btn btn-op" onclick="inputChar('/')">÷</button>
+
+        <button class="btn btn-num" onclick="inputChar('7')">7</button>
+        <button class="btn btn-num" onclick="inputChar('8')">8</button>
+        <button class="btn btn-num" onclick="inputChar('9')">9</button>
+        <button class="btn btn-op" onclick="inputChar('*')">×</button>
+
+        <button class="btn btn-num" onclick="inputChar('4')">4</button>
+        <button class="btn btn-num" onclick="inputChar('5')">5</button>
+        <button class="btn btn-num" onclick="inputChar('6')">6</button>
+        <button class="btn btn-op" onclick="inputChar('-')">−</button>
+
+        <button class="btn btn-num" onclick="inputChar('1')">1</button>
+        <button class="btn btn-num" onclick="inputChar('2')">2</button>
+        <button class="btn btn-num" onclick="inputChar('3')">3</button>
+        <button class="btn btn-op" onclick="inputChar('+')">+</button>
+
+        <button class="btn btn-num btn-zero" onclick="inputChar('0')">0</button>
+        <button class="btn btn-num" onclick="inputChar('.')">.</button>
+        <button class="btn btn-equal" onclick="calculate()">=</button>
+      </div>
+    </div>
+
+    <!-- 右側：計算過程視窗 -->
+    <div class="steps-panel">
+      <h2 class="steps-title">計算過程</h2>
+      <div class="steps-content" id="steps"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
