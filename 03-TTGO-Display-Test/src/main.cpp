@@ -160,7 +160,7 @@ void printSystemInfo() {
     Serial.printf("║  晶片型號：ESP32 rev.%d\n", chip.revision);
     Serial.printf("║  CPU 核心：%d 核 @ %d MHz\n", chip.cores, getCpuFrequencyMhz());
     Serial.printf("║  Flash 大小：%d MB (%s)\n",
-                  spiFlashGetSize() / (1024 * 1024),
+                  Esp.getFlashChipSize() / (1024 * 1024),
                   (chip.features & CHIP_FEATURE_EMB_FLASH) ? "內建" : "外接");
     Serial.printf("║  可用 Heap：%d bytes (%.1f KB)\n",
                   ESP.getFreeHeap(), ESP.getFreeHeap() / 1024.0);
